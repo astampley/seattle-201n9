@@ -41,7 +41,9 @@ function multiply(a,b){ //eslint-disable-line
 testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+// function sumAndMultiply (a,b,c){
 
+// }
 /////////////////////////////////////
 /* Problem 3
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and concatenates messages using the arguments that were passed into the function:
@@ -55,11 +57,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var sum1 = sum(a,b);
+  sum1 = sum(sum1[0], c);
+  sum1 = sum1[0];
+  console.log('sum1', sum1);
+  var multiply1 = multiply(a,b);
+  console.log('this is multiply1', multiply1);
+  multiply2 = multiply(multiply1, c);
+  // multiply1 = multiply1[0];
+  console.log('multiply2', multiply2);
+  var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum1 + '.';
+  console.log('message1', message1);
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply1 + '.';
+  return [sum1, multiply2, message1, message2];
 }
-
+sumAndMultiply(4,7,5);
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
