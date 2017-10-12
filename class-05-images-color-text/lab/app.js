@@ -61,14 +61,15 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   sum1 = sum(sum1[0], c);
   sum1 = sum1[0];
   console.log('sum1', sum1);
-  var multiply1 = multiply(a,b);
+  var multiply1 = multiply(a,b)[0];
   console.log('this is multiply1', multiply1);
-  multiply2 = multiply(multiply1, c);
+  var multiply2 = multiply(multiply1, c)[0];
   // multiply1 = multiply1[0];
   console.log('multiply2', multiply2);
   var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum1 + '.';
   console.log('message1', message1);
-  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply1 + '.';
+  var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply2 + '.';
+  console.log('message2', message2);
   return [sum1, multiply2, message1, message2];
 }
 sumAndMultiply(4,7,5);
